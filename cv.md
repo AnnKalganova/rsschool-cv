@@ -1,7 +1,7 @@
 # Anna Kalganova
 
 ### Contacts 
-**telegram:** ann_kalganova, **email:** anuta,kalganova@gmail.com
+**Telegram:** *ann_kalganova*.  **Email:** *anuta,kalganova@gmail.com*
 
 ### About me
 From school I knew that I would work in IT, it only remained to decide on the profession. After studying for 3 years at the university in the IT specialty, I learned a lot about different areas of IT (working with databases, backend, frontend, ux design). 
