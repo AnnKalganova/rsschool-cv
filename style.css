@@ -1,3 +1,35 @@
+
+@font-face {
+    font-family: "Montserrat"; 
+    src: url(fonts/Montserrat/Montserrat-Bold.ttf) format('truetype'); 
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url(fonts/Montserrat/Montserrat-SemiBold.ttf) format('truetype'); 
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url(fonts/Montserrat/Montserrat-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url(fonts/Montserrat/Montserrat-Regular.ttf) format('truetype'); 
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Montserrat"; 
+    src: url(fonts/Montserrat/Montserrat-Thin.ttf) format('truetype'); 
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Bebas; /* Имя шрифта */
+    src: url(fonts/Bebas_Neue/BebasNeue-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
 * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -6,6 +38,7 @@
 body{
     width: 100%;
     background-color: #ffffff;
+    font-family: Montserrat;
 }
 .container{
     margin: 20px auto;
@@ -28,25 +61,38 @@ header img{
 }
 header h1{
     margin: 0;
+    width: 400px;
     position: absolute;
-    top:50px;
-    left: 40%;
-    font-size:90px;
-    font-weight: 700;
-    letter-spacing: 3px;
+    top:90px;
+    left: 47.2%;
+    color: #1B1C19;
+    font-family: Bebas;
+    font-size:100px;
+    font-weight: 400;
+    line-height: 80px;
 }
-header span{
+header>span{
     position: absolute;
     top:250px;
-    left:54%;
-    font-size: 30px;
+    left:58%;
+    font-size: 19px;
+    color: #555555;
 }
+
+h2, h3{
+    text-transform: uppercase;
+    font-weight:700;
+    font-size: 18px;
+}
+
 aside, main{
-    height: 90%;
-    padding-top: 50%;
+    height: 95%;
+    padding-top: 53%;
     padding-right: 20px;
     padding-left: 20px;
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #272727;
 }
 
 aside{
@@ -54,11 +100,20 @@ aside{
     width: 30%;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: #f5c8b3;/* #D6E5E3 */
+    background:linear-gradient(to bottom, #f5c8b3, #fde7ae); /* #D6E5E3 */
 }
+
+article.education{
+  padding-top: 6px;
+}
+
+.contacts, .skills{
+    margin-top:50px;
+}
+
 main{
     margin-left: 30%;
-    
+    /* padding-right: 50px; */
 }
 
 section{
@@ -71,14 +126,13 @@ section ul{
 }
 section li{
     padding-left:10px;
-    font-size: 26px;
 }
 
 section li:before{
     content: '';
     display: inline-block;
-    height:16px;
-    width: 16px;
+    height:12px;
+    width: 12px;
     /* vertical-align: middle; */
     background-color:#000;
     margin-right:15px;
@@ -93,5 +147,27 @@ p.code{
    font-size: 10px;
 }
 footer{
- 
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#4f4f4f;
+    background-color: #fde7ae;
+    border-radius: 5% 5% 0 0 ;
 }
+
+footer a {
+    text-decoration: none;
+    color: #4f4f4f;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer .github-icon {
+    margin-right: 10px;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+  }
