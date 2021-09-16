@@ -59,6 +59,7 @@ header{
 header img{
     float:left;
 }
+
 header h1{
     margin: 0;
     width: 400px;
@@ -71,6 +72,7 @@ header h1{
     font-weight: 400;
     line-height: 80px;
 }
+
 header>span{
     position: absolute;
     top:250px;
@@ -79,15 +81,17 @@ header>span{
     color: #555555;
 }
 
-h2, h3{
+h2,
+h3{
     text-transform: uppercase;
     font-weight:700;
     font-size: 18px;
 }
 
-aside, main{
+aside,
+main{
     height: 95%;
-    padding-top: 53%;
+    padding-top: 52%;
     padding-right: 20px;
     padding-left: 20px;
     font-size: 16px;
@@ -104,10 +108,11 @@ aside{
 }
 
 article.education{
-  padding-top: 7px;
+  padding-top: 8px;
 }
 
-.contacts, .skills{
+.contacts, 
+.skills{
     margin-top:30px;
 }
 
@@ -121,13 +126,16 @@ article.education{
     color:#b68f7d;
     padding-left: 15px;
 }
+
 .transition {
     transition: 0.5s;
   }
+
 .contacts p{
     margin-top: 5px;
   margin-bottom: 0px;
 }
+
 .contacts a{
     color: #272727;
     text-decoration: none;
@@ -136,6 +144,7 @@ article.education{
 .contacts a:hover{
     color: #b68f7d;
 }
+
 main{
     margin-left: 31%;
     padding-right: 50px;
@@ -144,27 +153,31 @@ main{
 section{
     margin-top:20px;
 }
+
 section ul{
     list-style:none;
     margin:0;
     padding: 0;
 }
+
 section li{
     padding-left:23px;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 section li:before{
     content: '';
     display: inline-block;
-    height:12px;
+    height: 12px;
     width: 12px;
-    /* vertical-align: middle; */
-    background-color:#000;
-    margin-right:27px; /* расстояние до названия  */
-  }
+    background-color: #000;
+    margin-right: 27px; 
+}
+
 section p{
-    margin-left:28px;
-    padding-left:32px;
+    margin-left: 28px;
+    padding-left: 32px;
     border-left: grey 1px solid;
 }
 
