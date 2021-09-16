@@ -100,20 +100,45 @@ aside{
     width: 30%;
     margin-left: 20px;
     margin-right: 20px;
-    background:linear-gradient(to bottom, #f5c8b3, #fde7ae); /* #D6E5E3 */
+    background:linear-gradient(to bottom, #f5c8b3, #fde7ae); /* #f5c8b3 */
 }
 
 article.education{
-  padding-top: 6px;
+  padding-top: 7px;
 }
 
 .contacts, .skills{
-    margin-top:50px;
+    margin-top:30px;
 }
 
+.skills p{
+    padding:0;
+    margin:0;
+    cursor: pointer;
+}
+
+.skills p:hover{
+    color:#b68f7d;
+    padding-left: 15px;
+}
+.transition {
+    transition: 0.5s;
+  }
+.contacts p{
+    margin-top: 5px;
+  margin-bottom: 0px;
+}
+.contacts a{
+    color: #272727;
+    text-decoration: none;
+}
+
+.contacts a:hover{
+    color: #b68f7d;
+}
 main{
-    margin-left: 30%;
-    /* padding-right: 50px; */
+    margin-left: 31%;
+    padding-right: 50px;
 }
 
 section{
@@ -125,7 +150,7 @@ section ul{
     padding: 0;
 }
 section li{
-    padding-left:10px;
+    padding-left:23px;
 }
 
 section li:before{
@@ -135,17 +160,18 @@ section li:before{
     width: 12px;
     /* vertical-align: middle; */
     background-color:#000;
-    margin-right:15px;
+    margin-right:27px; /* расстояние до названия  */
   }
 section p{
-    margin-left:27px;
-    padding-left:21px;
+    margin-left:28px;
+    padding-left:32px;
     border-left: grey 1px solid;
 }
 
 p.code{
-   font-size: 10px;
+   font-size: 14px;
 }
+
 footer{
     height: 5%;
     display: flex;
@@ -161,6 +187,10 @@ footer a {
     color: #4f4f4f;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+footer a:hover{
+    color: #b68f7d;
 }
 
 footer .github-icon {
