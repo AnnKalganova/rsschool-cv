@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna Kalganova</title>
+    <script src="self-rating.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
     <div class="container">
@@ -18,33 +22,35 @@
             <article class="education">
                 <h2>Education</h2>
                 <p>Belarusian State Technological University</p>
-                <p style="font-size: 14px; padding-left: 10px; margin: 0;">Faculty of Information Technology</p>
+                <p>Faculty of Information Technology</p>
             </article>
             <article class="skills">
                 <h2>Skills</h2>
-                <p class="transition">C#</p>
-                <p class="transition">Java</p>
-                <p class="transition">Kotlin</p>
-                <p class="transition">Html & Css & Js</p>
-                <p class="transition">Git</p>
-                <p class="transition">Figma</p>
-                <span class="notSkill" style="padding-left: 10px;">Know in theory:</span>
-                <p class="transition">Scrum</p>
-                <p class="transition">Kanban</p>
-                <p class="transition">Waterfall</p>
+                <ul class="transition">
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>Kotlin</li>
+                    <li>Html & Css & Js</li>
+                    <li>Git</li>
+                    <li>Figma</li>
+                    <span class="theory">Know in theory:</span>
+                    <li>Scrum</li>
+                    <li>Kanban</li>
+                    <li>Waterfall</li>
+                </ul>
             </article>
             <article class="contacts">
                 <h2>Contacts</h2>
-                <p>+375 (44) 721-57-80</p>
-                <p><a href="mailto:anuta.kalganova@gmail.com" target="_blank" > Gmail</a></p>
-                <p><a href="https://t.me/ann_kalganova" target="_blank">Telegram</a></p>
+                <ul>
+                    <li>+375 (44) 721-57-80</li>
+                    <li><a href="mailto:anuta.kalganova@gmail.com" target="_blank" > Gmail</a></li>
+                    <li><a href="https://t.me/ann_kalganova" target="_blank">Telegram</a></li>
+                </ul>
             </article>
         </aside>
         <main>
             <section>
-                <ul>
-                    <li>About me</li>
-                </ul>
+                <h3 class="me">About me</h3>
                 <p>From school I knew that I would work in IT, 
                     it only remained to decide on the profession. 
                     After studying for 3 years at the university in 
@@ -58,23 +64,20 @@
                     </p>
             </section>
             <section>
-                <ul>
-                 <li>English</li>
-                </ul>
+                <h3 class="english">English</h3>
                 <p>Streamline certificate for B2 level</p>
             </section>
             <section>
-                <ul>
-                    <li>Code example</li>
-                </ul>
-                <p class="code">
-                    <code>
-                        function getMiddle(s){<br>
-                            &ensp;&ensp;let index = Math.floor(s.length/2);<br>
-                            &ensp;&ensp;return s.length % 2 === 0 ? s[index-1] + s[index] : s[index];<br>
-                        }
-                    </code>
-                </p>
+                <h3 class="code-title">Code example</h3>
+                <pre>
+                    <code class="language-javascript hljs">
+                    function getMiddle(s){<br>
+                        &emsp;&emsp;let index = Math.floor(s.length/2);<br>
+                        &emsp;&emsp;return s.length % 2 === 0 ? s[index-1]<br>
+                        &emsp;&emsp;+ s[index] : s[index];<br>
+                    }
+                </code>
+            </pre>
             </section>
         </main>
         <footer>

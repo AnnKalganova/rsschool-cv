@@ -103,12 +103,17 @@ aside{
     float: left;
     width: 30%;
     margin-left: 20px;
-    margin-right: 20px;
     background:linear-gradient(to bottom, #f5c8b3, #fde7ae); /* #f5c8b3 */
 }
 
-article.education{
+.education{
   padding-top: 8px;
+}
+
+.education p:last-child{
+    font-size: 14px;
+    padding-left: 10px;
+    margin: 0;
 }
 
 .contacts, 
@@ -116,20 +121,31 @@ article.education{
     margin-top:30px;
 }
 
+h2 ~ ul{
+    padding:0;
+    margin:0;
+    list-style-type:none;
+    cursor:default;
+}
+
 .skills p{
     padding:0;
     margin:0;
-    cursor: pointer;
+    cursor:default;
 }
 
-.skills p:hover{
+.skills li:hover{
     color:#b68f7d;
     padding-left: 15px;
 }
 
-.transition {
+.transition>li {
     transition: 0.5s;
-  }
+}
+
+.theory{
+    padding-left: 10px;
+}
 
 .contacts p{
     margin-top: 5px;
@@ -146,7 +162,7 @@ article.education{
 }
 
 main{
-    margin-left: 31%;
+    margin-left: 30%;
     padding-right: 50px;
 }
 
@@ -154,36 +170,99 @@ section{
     margin-top:20px;
 }
 
-section ul{
-    list-style:none;
-    margin:0;
-    padding: 0;
+section h3,section p{
+    padding-left: 30px;
 }
 
-section li{
-    padding-left:23px;
-    font-weight: 600;
-    font-size: 20px;
+section h3{
+    border-bottom:  2px solid;
 }
 
-section li:before{
-    content: '';
-    display: inline-block;
-    height: 12px;
-    width: 12px;
-    background-color: #000;
-    margin-right: 27px; 
+.me {
+    margin-right: 310px;
+    border-color: #F9D5B3;
 }
 
-section p{
-    margin-left: 28px;
-    padding-left: 32px;
-    border-left: grey 1px solid;
+.english{
+    margin-right: 320px;
+    border-color: #FBDFB2;
+}
+
+.code-title{
+    margin-right: 260px;
+    border-color: #FBE0B2;
 }
 
 p.code{
    font-size: 14px;
 }
+
+
+pre code.hljs {
+    display: block;
+    overflow-x:auto;
+    white-space:nowrap;
+    padding-left:40px;
+}
+
+/*!
+  Theme: An Old Hope – Star Wars Syntax
+  Author: (c) Gustavo Costa <gusbemacbe@gmail.com>
+  Maintainer: @gusbemacbe
+
+  Original theme - Ocean Dark Theme – by https://github.com/gavsiu
+  Based on Jesse Leite's Atom syntax theme 'An Old Hope'
+    https://github.com/JesseLeite/an-old-hope-syntax-atom
+*/
+
+.hljs {
+    background: #ffffff;
+    height: 150px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 20px;
+    color:#c0c5ce
+}
+
+.hljs-comment, .hljs-quote {
+    color:#b6b18b
+}
+
+.hljs-deletion, .hljs-name, .hljs-regexp, .hljs-selector-class, .hljs-selector-id, .hljs-tag, .hljs-template-variable, .hljs-variable {
+    color:#eb3c54
+}
+
+.hljs-built_in, .hljs-link, .hljs-literal, .hljs-meta, .hljs-number, .hljs-params, .hljs-type {
+    color:#e7ce56
+}
+
+.hljs-attribute {
+    color:#ee7c2b
+}
+
+.hljs-addition, .hljs-bullet, .hljs-string, .hljs-symbol {
+    color:#4fb4d7
+}
+
+.hljs-section, .hljs-title {
+    color:#78bb65
+}
+
+.hljs-keyword, .hljs-selector-tag {
+    color:#b45ea4
+}
+
+.hljs-emphasis {
+    font-style:italic
+}
+
+.hljs-strong {
+    font-weight: 700
+}
+
+
 
 footer{
     height: 5%;
