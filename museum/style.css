@@ -1,3 +1,11 @@
+:root {
+    --bg-dark: #151719;
+    --dark-red: #710707;
+    --font-gold: #9d8665;
+    --font1: 80px;
+    --font2: 32px;
+}
+
 html{
     scroll-behavior:smooth;
 }
@@ -6,18 +14,34 @@ body{
     margin: 0;
 }
 
+a{
+    text-decoration: none; 
+    color: black;
+}
+
+.a-dark{
+    color:white;
+}
+
 li{
     list-style: none;
 }
 
 h2{
     text-transform: uppercase;
+    font-size: 80px;
+    margin:0;
 }
+
 .container{
     margin: 0 auto;
     max-width: 1440px;
 }
 
+header{
+    max-height: 150px;
+    height:100%;
+}
 .header-container{
     display: flex;
     justify-content: space-between;
@@ -31,13 +55,20 @@ h2{
     background-image: url(./assets/svg/logo-icon.svg);
 }
 
+.logo-text{
+    font-size: 28px;
+}
 .menu{
     height: 26px;
     max-width: 720px;
     width: 100%;
+    padding-top: 62px;
+    padding-bottom: 62px;
+    font-size: 22px;
 }
 
 .menu ul{
+    margin:0;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -46,10 +77,7 @@ h2{
     padding-left: 10px;
     padding-right: 10px;
 }
-.menu a{
-    text-decoration: none;
-    color: white;
-}
+
 section {
     padding-top: 75px;
     padding-bottom: 75px;
@@ -62,4 +90,146 @@ section {
 
 .video-section{
     padding-top: 90px;
+}
+
+.welcome-section{
+    padding: 0;
+}
+.welcome-block{
+    height: 810px;
+    background-image: url(./assets/img/welcome-slider/1.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    font-size: 28px;
+}
+
+.welcome-block h2{
+    margin:0;
+}
+
+.welcome-info{
+    height: 100%;
+    width: 40%;
+    padding-top: 150px;
+    /* градиент  */
+}
+.dicover-button{
+    height: 75px;
+    width: 360px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.visiting h2{
+    padding-bottom: 25px;
+    border-bottom: brown 3px solid;
+}
+
+.visiting-cards{
+    max-width: 1440px;
+    display:flex;
+    flex-wrap: wrap;
+    row-gap: 75px;
+    column-gap: 60px;
+}
+
+.visiting h3{
+    text-transform: uppercase;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.visiting h3::after{
+    content: "";
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 300px;
+    height: 2px;
+    background-color: brown;
+}
+
+.card{
+    display: block;
+    width: 440px;
+    height: 424px;
+    font-size: 18px;
+}
+.v-tour{
+    font-size: 22px;
+}
+
+
+.tickets-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-form{
+    width: 100%;
+}
+.ticket-type{
+}
+
+.rb-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.rb-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.rb-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.rb-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.rb-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.rb-container .checkmark:after {
+    top: 9px;
+   left: 9px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: white;
 }
