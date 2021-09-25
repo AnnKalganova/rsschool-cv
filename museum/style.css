@@ -1,9 +1,33 @@
+@font-face {
+    font-family: Roboto;
+    src: url("assets/fonts/Roboto/Roboto-Thin.ttf");
+    font-weight: 100;
+}
+  @font-face {
+    font-family: Roboto;
+    src: url("assets/fonts/Roboto/Roboto-Light.ttf");
+    font-weight: 300;
+}
+  @font-face {
+    font-family: Roboto;
+    src: url("assets/fonts/Roboto/Roboto-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: Forum;
+    src: url("assets/fonts/Forum/Forum-Regular.ttf");
+    font-weight: 300;
+}
+
 :root {
-    --bg-dark: #151719;
+    --bg-dark: #030303;
     --dark-red: #710707;
     --font-gold: #9d8665;
-    --font1: 80px;
-    --font2: 32px;
+    --font80: 80px;
+    --font32: 32px;
+    --font28: 28px;
+    --font22: 22px;
+    --font18: 18px;
 }
 
 html{
@@ -28,9 +52,14 @@ li{
 }
 
 h2{
-    text-transform: uppercase;
-    font-size: 80px;
     margin:0;
+    text-transform: uppercase;
+    color:var(--font-gold);
+    font-size: var(--font80);
+    font-family: Forum;
+    font-weight: 100;
+    letter-spacing: 5px;
+    
 }
 
 .container{
@@ -53,29 +82,46 @@ header{
     width: 49px;
     height: 26px;
     background-image: url(./assets/svg/logo-icon.svg);
+    margin-right: 25px;
+    align-self: flex-start;
 }
 
 .logo-text{
-    font-size: 28px;
+    font-size: var(--font28);
+    font-family: Forum;
+    font-weight: 100;
 }
 .menu{
     height: 26px;
-    max-width: 720px;
+    max-width: 775px;
     width: 100%;
     padding-top: 62px;
     padding-bottom: 62px;
-    font-size: 22px;
+    font-size: var(--font22);
+    font-family: Roboto;
+    font-weight:100;
+    letter-spacing: 2px;
 }
 
 .menu ul{
     margin:0;
+    padding:0;
     display: flex;
     justify-content:space-between;
     align-items: center;
 }
 .menu li{
     padding-left: 10px;
-    padding-right: 10px;
+}
+
+li.visiting-item{
+    padding-left: 0;
+}
+
+.underlineH2{
+    margin-bottom: 75px;
+    padding-bottom: 25px;
+    border-bottom: var(--dark-red) 3px solid;
 }
 
 section {
@@ -84,8 +130,12 @@ section {
 }
 
 .dark-section{
-    background-color: black; 
-    color: white; 
+    background-color: var(--bg-dark); 
+    color: white;
+}
+
+.dark-section h2{
+    color:white;
 }
 
 .video-section{
@@ -100,33 +150,38 @@ section {
     background-image: url(./assets/img/welcome-slider/1.jpg);
     background-repeat: no-repeat;
     background-position: 100% 0;
-    font-size: 28px;
+    font-size: var(--font28);
+    font-family: Roboto;
 }
 
 .welcome-block h2{
     margin:0;
+    padding-top: 150px;
+    line-height: 90px;
 }
 
 .welcome-info{
     height: 100%;
-    width: 40%;
-    padding-top: 150px;
-    /* градиент  */
+    width: 55%;
+    background: linear-gradient(to right, var(--bg-dark)56%, #03030300 );
+    letter-spacing: 2px;
 }
-.dicover-button{
+
+.discover-button{
     height: 75px;
     width: 360px;
+    margin-top: 75px;
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
+    background-color: var(--dark-red);
     border-radius: 10px;
-    font-size: 22px;
+    font-size: var(--font22);
+    letter-spacing: 2px;
 }
 
-.visiting h2{
-    padding-bottom: 25px;
-    border-bottom: brown 3px solid;
+.discover-button:hover{
+    background-color: var(--font-gold);
 }
 
 .visiting-cards{
@@ -137,12 +192,16 @@ section {
     column-gap: 60px;
 }
 
+
 .visiting h3{
     text-transform: uppercase;
-    font-size: 32px;
     margin: 0;
+    margin-top:20px;
     padding: 0;
     position: relative;
+    font-size: var(--font32);
+    font-family: Forum;
+    letter-spacing: 5px;
 }
 
 .visiting h3::after{
@@ -152,19 +211,75 @@ section {
     left: 0;
     width: 300px;
     height: 2px;
-    background-color: brown;
+    background-color: var(--dark-red);
+    transition: 0.8s;
 }
 
 .card{
     display: block;
     width: 440px;
     height: 424px;
-    font-size: 18px;
-}
-.v-tour{
-    font-size: 22px;
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: var(--font18);
+    transition: 0.8s;
 }
 
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card:hover h3{
+    color:var(--font-gold);
+}
+.card:hover h3::after{
+    width: 100%;
+}
+
+.v-tour-small{
+    margin:0;
+    line-height: 21px;
+}
+.v-tour{
+    margin: 21px 0 10px 0;
+    font-size: var(--font22);
+    line-height: 26px;
+}
+
+.explore-block{
+    max-width: 1440px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* row-gap: 62px;
+    column-gap: 60px; */
+}
+.explore-info{
+    display: block;
+    height: 515px;
+    width: 660px;
+    min-width: 660px;
+    padding-right: 60px;
+    font-size: var(--font22);
+    font-family: Roboto;
+    font-weight:100;
+    line-height: 38px;
+}
+.explore-info h2{
+    line-height: 90px;
+}
+.explore-info p{
+    margin-top:25px;
+}
+.yellow{
+    color: var(--font-gold);
+}
+.explore-img{
+   display:block;
+   height: 700px;
+    width: 720px;
+    padding-top: 10px;
+}
 
 .tickets-block{
     display: flex;
@@ -184,7 +299,7 @@ section {
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: var(--font22);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
