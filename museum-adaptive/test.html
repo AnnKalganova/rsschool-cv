@@ -1,0 +1,84 @@
+<div class="buy-ticket-popup">
+    <div class="popup-container container">
+        <div class="close-popup"></div>
+        <div class="popup-content">
+            <div class="left-column">
+                <img src="./assets/svg/logo-gold.svg" alt="logo" class="popup-logo">
+                <h2>Booking tickets</h2>
+                <h5>Tour to Louvre</h5>
+                <form class="buy-form">
+                    <div class="buy-form-line">
+                        <span class="form-icon icon-date"></span>
+                        <input type="date" name="booking-form" id="date" required>
+                        <span class="form-icon icon-time"></span>
+                        <input type="time" name="booking-form" id="time" required>
+                    </div>
+                    <div class="buy-form-line">
+                        <span class="form-icon icon-name"></span>
+                        <input type="text" name="booking-form" id="name" placeholder="Name" required>
+                    </div>
+                    <div class="buy-form-line">
+                        <span class="form-icon icon-email"></span>
+                        <input type="email" name="booking-form" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="buy-form-line">
+                        <span class="form-icon icon-phone"></span>
+                        <input type="tel" name="booking-form" id="phone" placeholder="Phone" required>
+                    </div>
+                    <div class="buy-form-line">
+                        <!-- <span class="form-icon icon-select"></span> -->
+                        <select id="ticket-type" name="booking-form">
+                            <option class="hidden">Ticket Type</option>
+                            <option value="permanent">Permanent exhibition</option>
+                            <option value="temporary">Temporary exhibition</option>
+                            <option value="combined">Combined Admission</option>
+                        </select>
+                    </div>
+                    <div class="buy-form-section">
+                        <h6>Entry ticket</h6>
+                        <div class="ticket-line">
+                            <span>Basic 18+ (20 €)</span>
+                            <div class="ticket-count ticket-count-form basic">
+                                <button type="button" onclick="this.nextElementSibling.stepDown()" > - </button>
+                                <input class="quantity" min="0"  max ="20" name="quantity" value="1" type="number">
+                                <button type="button" onclick="this.previousElementSibling.stepUp()" > + </button>
+                            </div>
+                        </div>
+                        <div class="ticket-line">
+                            <span>Senior 65+ (10 €)</span>
+                            <div class="ticket-count ticket-count-form ">
+                                <button type="button" onclick="this.nextElementSibling.stepDown()" > - </button>
+                                <input class="quantity" min="0"  max ="20" name="quantity" value="1" type="number">
+                                <button type="button" onclick="this.previousElementSibling.stepUp()" > + </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="right-column">
+                <div class="overview">
+                    <img src="assets/img/overview.jpg" alt="piramid">
+                    <h2>Overview</h2>
+                    <h4>Tour to Louvre</h4>
+                    <p class="chosed chosed-date">Friday, August 19</p>
+                    <p class="chosed chosed-time">16 : 30</p>
+                    <p class="chosed chosed-type">Temporary exhibition</p>
+                </div>
+                <div class="total-check">
+                    <div class="chosed-tickets">
+                        <span class="ticket-count-total" id="ticket-count-basic">2</span>Basic (20 €)
+                        <span class="total-ticket-sum" id="sum-basic">40</span>&nbsp;€
+                    </div>
+                    <div class="chosed-tickets">
+                        <span class="ticket-count-total" id="ticket-count-senior">2</span>Senior (10 €)
+                        <span class="total-ticket-sum" id="sum-senior">20</span>&nbsp;€
+                    </div>
+                    <p class="total-price">
+                        <span class="total-payment">Total:</span>
+                        <span class="total-checkout">60</span>&nbsp;€
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
