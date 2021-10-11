@@ -131,19 +131,20 @@ function exitHandler() {
 }
 
 document.addEventListener("keydown", (e) => {
-	if (e.key === " " || e.key === "ArrowRight" || e.key === "ArrowLeft") {
+	if ((e.key === " " || e.key === "ArrowRight" || e.key === "ArrowLeft") && (videoIsVisible(video) || (isFullscreen && Boolean(document.fullscreenElement)))) {
 		e.preventDefault();
 	}
 });
-
 document.addEventListener("keyup", (e) => {
-	if (e.key === "m") handleVolumeClick();
-	if (e.key === " " || e.key === "k") togglePlay();
-	if (e.key === ",") videoVelocity(removeVelocityValue);
-	if (e.key === ".") videoVelocity(addVelocityValue);
-	if (e.key === "f") openFullscreen();
-	if (e.key === "j" || e.key === "ArrowLeft") skips(backSkipValue);
-	if (e.key === "l" || e.key === "ArrowRight") skips(forwardSkipValue);
+    if (videoIsVisible(video) || (isFullscreen && Boolean(document.fullscreenElement))){
+        if (e.key === "m") handleVolumeClick();
+        if (e.key === " " ) togglePlay();
+        if (e.key === ",") videoVelocity(removeVelocityValue);
+        if (e.key === ".") videoVelocity(addVelocityValue);
+        if (e.key === "f") openFullscreen();
+        if (e.key === "j" || e.key === "ArrowLeft") skips(backSkipValue);
+        if (e.key === "l" || e.key === "ArrowRight") skips(forwardSkipValue);
+    }
 });
 
 bigTogglePlayButton.addEventListener("click", togglePlay);
