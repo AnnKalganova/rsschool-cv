@@ -130,6 +130,17 @@ function exitHandler() {
 	}
 }
 
+function videoIsVisible(item) {
+
+	let coordinates = item.getBoundingClientRect()
+	let windowHeight = document.documentElement.clientHeight
+  
+	let topVisible = coordinates.top > 0 && coordinates.top < windowHeight
+	let bottomVisible = coordinates.bottom < windowHeight && coordinates.bottom > 0;
+  
+	return topVisible || bottomVisible;
+  }
+
 document.addEventListener("keydown", (e) => {
 	if ((e.key === " " || e.key === "ArrowRight" || e.key === "ArrowLeft") && (videoIsVisible(video) || (isFullscreen && Boolean(document.fullscreenElement)))) {
 		e.preventDefault();
